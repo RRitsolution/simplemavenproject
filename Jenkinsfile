@@ -22,7 +22,7 @@ agent any
     stage('change directory'){
         steps{
             
-            sh 'cd simplemavenproject/my-app'
+            sh 'cd my-app'
         }
     }
 
