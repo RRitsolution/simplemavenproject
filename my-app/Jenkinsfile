@@ -21,11 +21,12 @@ agent any
     }
     
 
-    stage('Build maven package'){
+    stage('Build maven package & deplot to remote repo'){
         steps{
-            sh 'cd my-app && mvn clean package'
+            sh 'cd my-app && mvn clean deploy'
         }
     }
+       
     }
     
     post {
