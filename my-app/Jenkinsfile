@@ -19,16 +19,11 @@ agent any
         }
 
     }
-    stage('change directory'){
-        steps{
-            
-            sh 'cd my-app'
-        }
-    }
+    
 
     stage('Build maven package'){
         steps{
-            sh 'mvn clean package'
+            sh 'cd my-app && mvn clean package'
         }
     }
     }
